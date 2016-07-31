@@ -1,0 +1,38 @@
+R-1.5 Give a single command that computes the sum from Exercise R-1.4, relying on Python’s comprehension syntax and the built-in sum function.
+
+import sys
+
+If ....
+    args = sys.args[1:]
+    num = args[0]
+    print sum(xrange(num - 1))
+
+R-1.6 Write a short Python function that takes a positive integer n and returns the sum of the squares of all the odd positive integers smaller than n.
+
+sum(xrange(n-1, 2))
+
+reduce lambda x,y x +y xrange n-1 2
+
+1.7 Give a single command that computes the sum from Exercise R-1.6, relying on Python’s comprehension syntax and the built-in sum function
+
+sum = 0
+for i in xrange n-1 2
+    sum+= i
+
+1.9 What parameters should be sent to the range constructor, to produce a range with values 50, 60, 70, 80?
+
+xrange(50, 90, 10)
+
+1.10 What parameters should be sent to the range constructor, to produce a range with values 8, 6, 4, 2, 0, −2, −4, −6, −8?
+
+xrange(8, -10, -2)
+
+1.11 Demonstrate how to use Python’s list comprehension syntax to produce the list [1, 2, 4, 8, 16, 32, 64, 128, 256].
+
+list_ = []
+for i in xrange(9):
+    list_.append(2 ** i)
+
+map(lambda x: 2 ** x, xrange(9))
+
+R-1.12 Python’s random module includes a function choice(data) that returns a random element from a non-empty sequence. The random module includes a more basic function randrange, with parameterization similar to the built-in range function, that return a random choice from the given range. Using only the randrange function, implement your own version of the choice function.
