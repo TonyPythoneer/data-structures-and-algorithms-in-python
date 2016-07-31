@@ -9,26 +9,32 @@ the sum of the squares of all the positive integers smaller than n.
 import unittest
 
 
-'''Functions'''
-def normal_algorithm(n):
-    '''algorithm'''
+def trapezoidal_with_sum(n):
+    '''normal algorithm'''
     if n <= 0:
         return 0
     return sum(list(range(n)))
 
 
-def the_best_algorithm(n):
-    '''the_best_algorithm'''
+def trapezoidal_with_reduce(n):
+    '''better algorithm'''
+    if n <= 0:
+        return 0
+    return reduce(lambda x, y: x + y, range(n))
+
+
+def trapezoidal_algorithm(n):
+    '''the best algorithm'''
     if n <= 0:
         return 0
     upper_limit = n - 1
     return (1 + upper_limit) * upper_limit / 2
 
 
-'''Test'''
+
 class TestNormalAlgorithm(unittest.TestCase):
     def setUp(self):
-        self.func = normal_algorithm
+        self.func = trapezoidal_with_sum
 
     def test_input_negative_number(self):
         result = self.func(-1)
@@ -43,9 +49,14 @@ class TestNormalAlgorithm(unittest.TestCase):
         self.assertEqual(result, (1 + 5 - 1) * (5 - 1) / 2)
 
 
+class TestBetterAlgorithm(TestNormalAlgorithm):
+    def setUp(self):
+        self.func = trapezoidal_with_reduce
+
+
 class TestTheBestAlgorithm(TestNormalAlgorithm):
     def setUp(self):
-        self.func = the_best_algorithm
+        self.func = trapezoidal_algorithm
 
 
 if __name__ == '__main__':
