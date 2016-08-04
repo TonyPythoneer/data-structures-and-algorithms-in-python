@@ -14,13 +14,17 @@ for i in xrange(9):
 import unittest
 
 
-def func(data):
-    pass
+def func():
+    return [2 ** i for i in xrange(9)]
 
 
 class Test(unittest.TestCase):
     def setUp(self):
         self.func = func
+
+    def test_first_case(self):
+        expect_result = [1, 2, 4, 8, 16, 32, 64, 128, 256]
+        self.assertEqual(expect_result, self.func())
 
 
 if __name__ == '__main__':
