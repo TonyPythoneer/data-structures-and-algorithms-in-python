@@ -17,7 +17,7 @@ def func(seq, index):
     return seq[len(seq) + index]
 
 
-class Test(unittest.TestCase):
+class TestFunc(unittest.TestCase):
     def setUp(self):
         self.seq = [1, 2, 3, 4, 5]
         self.func = func
