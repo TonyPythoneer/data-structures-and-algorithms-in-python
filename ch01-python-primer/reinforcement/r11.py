@@ -2,7 +2,14 @@
 # -*- coding: utf-8 -*-
 # @first_date  20160804
 # @date        20160804
-'''R-
+'''R-1.11
+
+Demonstrate how to use Python’s list comprehension syntax
+to produce the list [1, 2, 4, 8, 16, 32, 64, 128, 256].
+
+list_ = []
+for i in xrange(9):
+    list_.append(2 ** i)
 '''
 import unittest
 
