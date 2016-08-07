@@ -1,0 +1,59 @@
+Creativity 13 - 21
+
+C-1.13 Write a pseudo-code description of a function that reverses a list of n integers, so that the numbers are listed in the opposite order than they were before, and compare this method to an equivalent Python function for doing the same thing.
+
+list_[:-1]
+
+C-1.14 Write a short Python function that takes a sequence of integer values and determines if there is a distinct pair of numbers in the sequence whose product is odd.
+
+dict_ = {}
+for num in nums:
+  if num not in dict_:
+    dict_[num] = 1
+  else:
+    dict_[num] += 1
+
+for k, v in dict_.items():
+  if v > 1:
+    return 1
+  else:
+    return 0
+
+
+Write a Python function that takes a sequence of numbers and determines if all the numbers are different from each other (that is, they are distinct).
+
+list(set(nums))
+
+
+C-1.16 In our implementation of the scale function (page 25), the body of the loop executes the command data[j] =factor. We have discussed that numeric types are immutable, and that use of the =operator in this context causes the creation of a new instance (not the mutation of an existing instance). Howis it still possible, then, that our implementation of scale changes the actual parameter sent by the caller?
+
+def scale(data, factor): for val in data: val =factor
+
+C-1.17
+pass
+
+C-1.18
+l = [0]
+for i in range (9):
+  l[i] = i[-1] + 2 * i
+
+C-1.19
+
+string.lowerstring.split('')
+
+[ chr(66 + i) for i in range(26)]
+
+C-1.20
+
+def shuffle(data):
+  r = randomrange(len(data))
+  l = []
+  for i in r:
+    l.append(data[i])
+  return l
+
+C-1.21
+
+l = []
+l.append(input_something())
+return l[:-1]
