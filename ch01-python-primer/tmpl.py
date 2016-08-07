@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # @first_date  20160807
 # @date        20160807
-'''R-
+'''C-
 '''
 import unittest
 
